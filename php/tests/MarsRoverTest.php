@@ -46,4 +46,14 @@ class MarsRoverTest extends TestCase
 
         self::assertEquals('3:0:N', $result);
     }
+
+    /** @test */
+    public function given_MMML_command_return_3_0_W(): void
+    {
+        $marsRover = new MarsRover();
+
+        $result = $marsRover->execute('MMML');
+
+        self::assertEquals('3:0:W', $result);
+    }
 }
