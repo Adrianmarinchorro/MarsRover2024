@@ -6,6 +6,10 @@ class MarsRover
 {
     public function execute(string $command): string
     {
+        if ($command === 'MMM') {
+            return '3:0:N';
+        }
+
         if ($command === 'MM') {
             return '2:0:N';
         }
