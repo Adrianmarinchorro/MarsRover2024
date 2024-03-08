@@ -26,4 +26,14 @@ class MarsRoverTest extends TestCase
 
         self::assertEquals('1:0:N', $result);
     }
+
+    /** @test */
+    public function given_MM_command_return_2_0_N(): void
+    {
+        $marsRover = new MarsRover();
+
+        $result = $marsRover->execute('MM');
+
+        self::assertEquals('2:0:N', $result);
+    }
 }
