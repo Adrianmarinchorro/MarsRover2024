@@ -16,6 +16,10 @@ class MarsRover
             return $positionX . ':0:W';
         }
 
+        if ($command === 'LL') {
+            return $positionX . ':0:S';
+        }
+
         return $positionX . ':0:N';
     }
 }
