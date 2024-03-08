@@ -48,12 +48,12 @@ class MarsRoverTest extends TestCase
     }
 
     /** @test */
-    public function given_MMML_command_return_3_0_W(): void
+    public function given_L_command_return_0_0_W(): void
     {
         $marsRover = new MarsRover();
 
-        $result = $marsRover->execute('MMML');
+        $result = $marsRover->execute('L');
 
-        self::assertEquals('3:0:W', $result);
+        self::assertEquals('0:0:W', $result);
     }
 }

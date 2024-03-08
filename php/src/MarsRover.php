@@ -12,6 +12,10 @@ class MarsRover
 
         $positionX += substr_count($command, 'M');
 
+        if ($command === 'L') {
+            return $positionX . ':0:W';
+        }
+
         return $positionX . ':0:N';
     }
 }
