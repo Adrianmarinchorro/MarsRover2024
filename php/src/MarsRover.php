@@ -6,6 +6,6 @@ class MarsRover
 {
     public function execute(string $command): string
     {
-        return '';
+        return '0:0:N';
     }
 }
