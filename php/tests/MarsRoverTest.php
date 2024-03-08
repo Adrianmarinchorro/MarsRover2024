@@ -66,4 +66,14 @@ class MarsRoverTest extends TestCase
 
         self::assertEquals('0:0:S', $result);
     }
+
+    /** @test */
+    public function given_LLL_command_return_0_0_S(): void
+    {
+        $marsRover = new MarsRover();
+
+        $result = $marsRover->execute('LLL');
+
+        self::assertEquals('0:0:E', $result);
+    }
 }
