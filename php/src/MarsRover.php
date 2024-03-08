@@ -4,19 +4,14 @@ namespace Kata;
 
 class MarsRover
 {
+    private const INITIAL_POSITION_X = 0;
+
     public function execute(string $command): string
     {
-        if ($command === 'MMM') {
-            return '3:0:N';
-        }
+        $positionX = self::INITIAL_POSITION_X;
 
-        if ($command === 'MM') {
-            return '2:0:N';
-        }
+        $positionX += substr_count($command, 'M');
 
-        if ($command === 'M') {
-            return '1:0:N';
-        }
-        return '0:0:N';
+        return $positionX . ':0:N';
     }
 }
